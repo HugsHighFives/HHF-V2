@@ -5,3 +5,17 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Product.destroy_all
+
+data = [{title: "MJ Hug", description: "xxx", detail: "xxx", price: 10.00}]
+
+data.each do |product_info|
+  m = Product.new
+  m.title = product_info[:title]
+  m.description = product_info[:description]
+  m.detail = product_info[:detail]
+  m.price = product_info[:price]
+  m.save
+end
+
+puts "There are now #{Product.count} products in the database"

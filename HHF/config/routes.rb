@@ -25,7 +25,7 @@ HHF::Application.routes.draw do
   #------------------------------
 
   # Route for our home page.
-  get '/', controller: 'products', action: 'index'
+  get '/home', controller: 'products', action: 'index'
 
   get "/products", controller: 'products', action: 'index'
   post "/products", controller: 'products', action: 'create'
